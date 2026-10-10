@@ -2,6 +2,7 @@
 #include <WiFi.h>
 #include <WebServer.h>
 #include <ArduinoOTA.h>
+#include "secrets.h"  // WIFI_SSID / WIFI_PASSWORD - see include/secrets.h.example
 // 19th September 2026. First working battery emulator for Givenergy Gen1.
 // ============================================================
 // GivEnergy Gen1 LV BMS diagnostic emulator
@@ -28,11 +29,9 @@
 // WIFI / OTA / WEB
 // ============================================================
 
-static const char *WIFI_SSID =
-    "wifi";
-
-static const char *WIFI_PASSWORD =
-    "password";
+// WIFI_SSID and WIFI_PASSWORD now come from secrets.h (gitignored, not
+// committed). Copy include/secrets.h.example to include/secrets.h and fill
+// in your real credentials there.
 
 static const char *OTA_HOSTNAME =
     "giv-bms-emulator";
